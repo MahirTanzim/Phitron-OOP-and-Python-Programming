@@ -16,3 +16,9 @@ for item in things:
     print(item)
 
 print(len(things))
+# things[0] = "er"  can't chage item in tuple
+# print(things[0])    
+mega = ([1,2,34], [1, 4, 4,2])
+print(mega)
+mega[0][2] = 3
+print(mega)
