@@ -49,3 +49,5 @@ greenline = ACBus("GreenLine", 50000000, 25, True)
 
 greenline.run()
 print(greenline)
+
+print(ACBus.__mro__)
