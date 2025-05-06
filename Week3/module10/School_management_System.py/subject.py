@@ -10,5 +10,5 @@ class Subject:
     def exam(self, students):
         for student in students:
             mark = self.teacher.evaluate_exam() #1 -- 100
-            student.mark[self.name] = mark
+            student.marks[self.name] = mark
             student.subject_grade[self.name] = School.calculate_grade(marks=mark)

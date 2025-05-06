@@ -28,8 +28,14 @@ class Student(Person):
         for grade in self.subject_grade.values():
             point = School.grade_to_value(grade=grade)
             sum+=point
-        gpa = sum / len(self.subject_grade)
-        self.grade = School.value_to_grade(value=gpa)
+
+        if len(self.subject_grade) == 0:
+            gpa = 0.00
+            return f"{self.name} Final Grade : F with GPA : {gpa}"
+        else:
+            gpa = sum / len(self.subject_grade)
+            self.grade = School.value_to_grade(value=gpa)
+            return f"{self.name} Final Grade : {self.grade} with GPA : {gpa}"
 
     @property
     def id (self):
